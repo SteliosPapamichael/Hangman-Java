@@ -16,4 +16,6 @@ public class Hangman {
     } 
     prompter.displayOutcome();
   }
+  
+  // added this comment for github
 }

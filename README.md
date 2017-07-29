@@ -8,7 +8,19 @@ The Hangman game was written in Java by following the Java track on treehouse.
 Below, you will find some instructions -for beginners- on how to compile and run the program after you've downloaded all the files.
 This is the MVP of my Hangman game and i will keep on updating it until it's done.
 
+<<<<<<< HEAD
 instructions:
+=======
+-------------------------------------------------
+
+Final Product Release date : 30th July 2017
+-The game is now officially done and won't be receiving any more updates unless something comes up(an error,a suggestion etc.).
+-Thank you very much for trying my game out. Make sure to share your opinion about it!
+
+-------------------------------------------------
+
+Instructions:
+>>>>>>> Changes-field
 
 1) Download all the required files and place the whole folder on your computer(eg. on your desktop)
 2) Go into the "src" file and copy the path. It should look like this(it depends) : C:\Users\<your_name>\Desktop\Hangman-Java\HangmanApp\src
@@ -21,3 +33,5 @@ instructions:
 4) That's it, make sure you share your opinion about my first game. Your feedback helps me a lot.
 
 Hope you enjoy my game!
+
+*MVP = Minimum Viable Product

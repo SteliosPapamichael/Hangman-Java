@@ -8,8 +8,6 @@ The Hangman game was written in Java by following the Java track on treehouse.
 Below, you will find some instructions -for beginners- on how to compile and run the program after you've downloaded all the files.
 This is the MVP of my Hangman game and i will keep on updating it until it's done.
 
-*MVP = Minimum Viable Product
-
 instructions:
 
 1) Download all the required files and place the whole folder on your computer(eg. on your desktop)

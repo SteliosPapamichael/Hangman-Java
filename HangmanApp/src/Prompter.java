@@ -29,6 +29,12 @@ public class Prompter { // this class will handle all the I/O
     return isHit;
   }
   
+  public static String promptForNewAnswer(String userName) {
+	  Scanner scanner = new Scanner(System.in);
+	  System.out.printf("%s, please enter the answer:\n" , userName);
+	  return scanner.next();
+  }
+  
   public void displayProgress() {
     // %d stands for decimal and represents a number in the string formatter method
     System.out.printf("%s, you have %d tries left to solve:  %s\n", userName , game.getRemainingTries(), game.getCurrentProgress()); 
@@ -42,13 +48,30 @@ public class Prompter { // this class will handle all the I/O
 	 int scoreValue = game.scoreManager(game.getRemainingTries(), game.getAnswer().length());
 	// using a variable just for code clarity
     if (game.isWon()) {
-       System.out.printf("Congratulations %s, you won with %d tries remaining!\n", userName , game.getRemainingTries());
+       System.out.printf("\nCongratulations %s, you won with %d tries remaining!\n", userName , game.getRemainingTries());
        System.out.printf("Your score was : %d\n", scoreValue);
     } else {
-       System.out.printf("Sorry %s, you lost! The answer was: %s\n" , userName , game.getAnswer()); 
+       System.out.printf("\nSorry %s, you lost! The answer was: %s\n" , userName , game.getAnswer()); 
        System.out.printf("Your score was : %d\n", scoreValue);
     }
     displayHighScore(scoreValue);
+  }
+  
+  public boolean wantToReplay() {
+	  System.out.println("Would you like to play again?(answer with Yes or No)\n");
+	  Scanner scanner = new Scanner(System.in);
+	  String answer = scanner.next();
+	  if (answer.equalsIgnoreCase("yes")) {
+		  return true;
+	  } else if (answer.equalsIgnoreCase("no")) {
+		  return false;
+	  } else {
+		  throw new IllegalArgumentException("Invalid answer!");
+	  }
+  }
+  
+  public static void displayCredits() {
+	  System.out.println("\nThank you for playing Hangman!\nThis game was made by Stelios Papamichail using Java.\nFor more information, please email me at:\nstelios_papamichael@hotmail.com");
   }
   
 }

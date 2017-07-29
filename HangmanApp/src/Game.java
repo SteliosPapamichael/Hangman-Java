@@ -1,8 +1,12 @@
+
 public class Game { // this class will handle the game logic
+	
   public static final int MAX_MISSES = 7;
   private String answer;
   private String hits;
   private String misses;
+  private int currentScore = 0;
+  public static int highScore = 2300;
   
   // Constructor
   public Game(String answer) {
@@ -27,6 +31,39 @@ public class Game { // this class will handle the game logic
        throw new IllegalArgumentException(letter + " has already been guessed!");
     }
     return letter;
+  }
+  
+  // Score Manager
+  public int scoreManager(int remainingTries , int wordLength) {
+	  // score calculation based on remainingTries
+	  if (remainingTries == 7) {
+		  currentScore += 500;
+	  } else if (remainingTries <= 6 && remainingTries >= 4) {
+		  currentScore += 350;
+	  } else if (remainingTries < 4 && remainingTries >= 2) {
+		  currentScore += 100;
+	  } else if (remainingTries < 2 && remainingTries > 0) {
+		  currentScore += 10;
+	  }
+	  // score calculation based on wordLength
+	  if (wordLength > 20) {
+		  currentScore += 7583;
+	  } else if (wordLength >= 10) {
+		  currentScore += 5324;
+	  } else if (wordLength > 5) {
+		  currentScore += 2300;
+	  } else if (wordLength > 0 && wordLength <= 4) {
+		  currentScore += 555;
+	  }
+	  return currentScore;
+  }
+  
+  // highScore calculator
+  public int highScore(int currentScore) {
+	 if (currentScore >= highScore) {
+		  this.highScore = currentScore;
+	  }
+	  return this.highScore; 
   }
   
   public boolean applyGuess(String letters) {

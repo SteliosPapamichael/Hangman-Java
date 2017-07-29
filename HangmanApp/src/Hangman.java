@@ -10,6 +10,7 @@ public class Hangman {
     
     Game game = new Game(args[0]);
     Prompter prompter = new Prompter(game , args[1]);
+    System.out.printf("The high-score is: %d\n", game.highScore);
     while (game.getRemainingTries() > 0 && !game.isWon()) {
       prompter.displayProgress();
       prompter.promptForGuess();
@@ -17,5 +18,4 @@ public class Hangman {
     prompter.displayOutcome();
   }
   
-  // added this comment for github
 }

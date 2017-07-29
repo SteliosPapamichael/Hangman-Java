@@ -34,12 +34,21 @@ public class Prompter { // this class will handle all the I/O
     System.out.printf("%s, you have %d tries left to solve:  %s\n", userName , game.getRemainingTries(), game.getCurrentProgress()); 
   }
   
+  public void displayHighScore(int score) {
+	  System.out.printf("The high-score has now been set to: %d\n", game.highScore(score));
+  }
+  
   public void displayOutcome() {
+	 int scoreValue = game.scoreManager(game.getRemainingTries(), game.getAnswer().length());
+	// using a variable just for code clarity
     if (game.isWon()) {
        System.out.printf("Congratulations %s, you won with %d tries remaining!\n", userName , game.getRemainingTries());
+       System.out.printf("Your score was : %d\n", scoreValue);
     } else {
        System.out.printf("Sorry %s, you lost! The answer was: %s\n" , userName , game.getAnswer()); 
+       System.out.printf("Your score was : %d\n", scoreValue);
     }
+    displayHighScore(scoreValue);
   }
   
 }

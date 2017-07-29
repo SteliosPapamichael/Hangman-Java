@@ -10,10 +10,9 @@ This is the MVP of my Hangman game and i will keep on updating it until it's don
 
 
 Final Product Release date : 30th July 2017
--The game is now officially done and won't be receiving any more updates unless something comes up(an error,a suggestion etc.).
--Thank you very much for trying my game out. Make sure to share your opinion about it!
+The game is now officially done and won't be receiving any more updates unless something comes up(an error,a suggestion etc.).
+Thank you very much for trying my game out. Make sure to share your opinion about it!
 
--------------------------------------------------
 
 Instructions:
 

@@ -6,7 +6,7 @@ public class Game { // this class will handle the game logic
   private String hits;
   private String misses;
   private int currentScore = 0;
-  public static int highScore = 2300;
+  public static int highScore = 0;
   
   // Constructor
   public Game(String answer) {

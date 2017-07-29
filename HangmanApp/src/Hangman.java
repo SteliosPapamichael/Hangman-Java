@@ -14,11 +14,11 @@ public class Hangman {
         Game game = new Game(Prompter.promptForNewAnswer(args[0]));
         Prompter prompter = new Prompter(game , args[0]);
     	do {
-    		  System.out.printf("\nThe high-score is: %d\n", game.highScore);
+    		  System.out.printf("\nThe current high-score is: %d\n", game.highScore);
               prompter.displayProgress();
               prompter.promptForGuess();
     	} while (game.getRemainingTries() > 0 && !game.isWon());
-            prompter.displayOutcome();
+            prompter.displayOutcome(args[0]);
             try {
                 answer = prompter.wantToReplay();
             } catch (IllegalArgumentException iae) {

@@ -40,11 +40,11 @@ public class Prompter { // this class will handle all the I/O
     System.out.printf("%s, you have %d tries left to solve:  %s\n", userName , game.getRemainingTries(), game.getCurrentProgress()); 
   }
   
-  public void displayHighScore(int score) {
-	  System.out.printf("The high-score has now been set to: %d\n", game.highScore(score));
+  public void displayHighScore(int score , String userName) {
+	  System.out.printf("The high-score has now been set to: %d by %s\n", game.highScore(score) , userName);
   }
   
-  public void displayOutcome() {
+  public void displayOutcome(String userName) {
 	 int scoreValue = game.scoreManager(game.getRemainingTries(), game.getAnswer().length());
 	// using a variable just for code clarity
     if (game.isWon()) {
@@ -54,7 +54,7 @@ public class Prompter { // this class will handle all the I/O
        System.out.printf("\nSorry %s, you lost! The answer was: %s\n" , userName , game.getAnswer()); 
        System.out.printf("Your score was : %d\n", scoreValue);
     }
-    displayHighScore(scoreValue);
+    displayHighScore(scoreValue , userName);
   }
   
   public boolean wantToReplay() {

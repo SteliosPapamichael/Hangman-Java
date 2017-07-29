@@ -1,4 +1,4 @@
-# Hangman-Java
+# Hangman
 
 MVP* Release date : 26th July 2017
 
